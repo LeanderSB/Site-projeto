@@ -1,60 +1,148 @@
 /* Estilo geral para o corpo das páginas */
 body {
-    background-image: url("../Site/img.jpg") /* Caminho para sua imagem de fundo */
-    background-size: cover; /* Faz com que a imagem cubra toda a área do elemento */
-    background-position: center; /* Centraliza a imagem de fundo */
-    background-repeat: no-repeat; /* Impede a repetição da imagem */
-}
-
-/* Estilo específico para a página de login */
-.login-page {
+    margin: 0;
+    padding: 0;
     background-image: url("../Site/img.jpg"); /* Caminho para sua imagem de fundo */
     background-size: cover; /* Faz com que a imagem cubra toda a área do elemento */
     background-position: center; /* Centraliza a imagem de fundo */
     background-repeat: no-repeat; /* Impede a repetição da imagem */
+    color: #333; /* Cor de texto padrão para um fundo claro */
+    font-family: 'Roboto', sans-serif; /* Definindo a fonte Roboto */
 }
 
-/* Container para o formulário de login */
-.login-container {
-    width: 300px;
-    margin: 50px auto;
+/* Rolagem suave para navegação */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
     padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.login-container h2 {
+header h1 {
+    color: white; /* Cor do texto branco */
+    font-size: 2em; /* Tamanho maior para o título */
+    margin: 0;
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+    position: fixed; /* Fixa a barra de navegação no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+    z-index: 1000; /* Garante que a barra de navegação esteja acima de outros elementos */
+}
+
+.navbar ul {
+    list-style: none; /* Remove as bolinhas dos itens da lista */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+}
+
+.navbar li {
+    margin: 0 15px; /* Espaçamento entre os itens da lista */
+}
+
+.navbar a {
+    color: #333; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Deixa o texto dos links em negrito */
+}
+
+.navbar a:hover {
+    color: #007BFF; /* Muda a cor ao passar o mouse sobre os links */
+}
+
+/* Seções da página */
+section {
+    padding: 60px 20px; /* Espaçamento interno das seções */
+    text-align: center; /* Centraliza o conteúdo do texto */
+}
+
+.sobrenos, .atendimento {
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco com opacidade */
+    padding: 40px; /* Espaçamento interno dos blocos */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 800px; /* Largura máxima dos blocos */
+    margin: 20px auto; /* Centraliza horizontalmente e adiciona espaçamento vertical */
+}
+
+/* Estilo para os títulos */
+.centralizado {
     text-align: center;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed; /* Fixa o botão em um local específico */
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-button img {
+    width: 50px; /* Tamanho do ícone do WhatsApp */
+    height: 50px;
+}
+
+/* Estilo para a página de cadastro */
+.login-page {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escuro semi-transparente */
+    color: rgb(5, 5, 5); /* Cor do texto branco */
+    display: flex; /* Exibe os itens da página em flexbox */
+    justify-content: center; /* Centraliza o formulário horizontalmente */
+    align-items: center; /* Centraliza o formulário verticalmente */
+    height: 100vh; /* Altura total da tela */
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+    padding: 30px; /* Espaçamento interno do formulário */
+    border-radius: 10px; /* Bordas arredondadas */
+    max-width: 400px; /* Largura máxima do formulário */
+    width: 100%; /* Faz o formulário ocupar toda a largura disponível */
+}
+
+.login-container h1 {
+    font-size: 1.8em; /* Tamanho do título do formulário */
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .login-container label {
-    margin-top: 10px;
-    font-weight: bold;
+    display: block; /* Exibe os rótulos como blocos */
+    margin-bottom: 5px; /* Espaçamento inferior dos rótulos */
 }
 
-.login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0 15px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.login-container input[type="text"],
+.login-container input[type="number"],
+.login-container input[type="tel"],
+.login-container input[type="email"] {
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível */
+    padding: 10px; /* Espaçamento interno dos campos */
+    margin-bottom: 15px; /* Espaçamento inferior dos campos */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda cinza clara */
 }
 
-.login-container button {
-    width: 100%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+.login-container input[type="submit"] {
+    width: 100%; /* Faz o botão ocupar toda a largura disponível */
+    padding: 10px; /* Espaçamento interno do botão */
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold; /* Texto em negrito */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
 }
 
-.login-container button:hover {
-    background-color: #45a049;
+.login-container input[type="submit"]:hover {
+    background-color: #0056b3; /* Muda a cor do fundo ao passar o mouse */
 }
